@@ -32,6 +32,9 @@ GEM
     multi_json (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    nokogiri (1.11.7-x86_64-darwin)
+      racc (~> 1.4)
+    open-uri (0.1.0)
     parallel (1.20.1)
     parser (3.0.2.0)
       ast (~> 2.4.1)
@@ -41,6 +44,7 @@ GEM
     pry-byebug (3.9.0)
       byebug (~> 11.0)
       pry (~> 0.13.0)
+    racc (1.5.2)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
@@ -101,6 +105,8 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  nokogiri
+  open-uri
   pry-byebug
   rake
   rspec
