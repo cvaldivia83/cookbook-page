@@ -1,0 +1,21 @@
+
+  <div class="row">
+    <div class="col-10 col-lg-6 col-md-10 my-4 mx-auto mx-auto">
+      <div class="card">
+        <div class="card-body">
+         <h1 class="card-title fw-bold h3">
+          Which recipe would you like to import?
+         </h1>
+         <p class="lead">Click on the recipe of your choice and we will import the recipe for you.</p>
+
+          <div class="mx-auto">
+            <% @recipes_array.each_with_index do |recipe, index| %>
+              <a href="/ingredients/<%= index %>/<%= @ingredient %>" class="text-dark fw-normal d-block my-2 h4 text-decoration-none bg-light p-2 border border-secondary rounded">
+                <%= index + 1 %>. <%= recipe[:title] %>
+              </a>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
