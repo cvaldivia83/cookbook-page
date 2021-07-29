@@ -38,6 +38,7 @@ GEM
     parallel (1.20.1)
     parser (3.0.2.0)
       ast (~> 2.4.1)
+    pg (1.2.3)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -103,10 +104,12 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  activerecord
   better_errors
   binding_of_caller
   nokogiri
   open-uri
+  pg
   pry-byebug
   rake
   rspec
