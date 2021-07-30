@@ -3,6 +3,7 @@ ruby "2.6.6"
 gem 'activerecord'
 gem "sinatra"
 gem "sinatra-contrib"
+gem "require_all"
 gem "sinatra-activerecord"
 gem "rake"
 gem 'rubocop'
