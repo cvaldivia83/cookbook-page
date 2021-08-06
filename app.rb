@@ -12,4 +12,8 @@ class App < Sinatra::Base
   get '/new' do
     erb :new
   end
+
+  get '/import' do
+    erb :import
+  end
 end
