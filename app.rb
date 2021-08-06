@@ -8,4 +8,8 @@ class App < Sinatra::Base
   get '/about' do
     erb :about
   end
+
+  get '/new' do
+    erb :new
+  end
 end
