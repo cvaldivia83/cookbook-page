@@ -12,12 +12,9 @@ gem 'activerecord', '5.2.3', :require => 'active_record'
 gem 'rack'
 gem 'rake'
 gem 'require_all'
-gem 'pry'
+gem 'pg'
 
 group :development do
   gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg'
+  gem 'pry'
 end
