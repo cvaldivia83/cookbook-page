@@ -22,12 +22,12 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/recipes' do
-    recipe = Recipe.create(
-    title: params[:title],
-    description: params[:description],
-    prep_time: params[:prep_time],
-    rating: params[:rating]
-  )
+    Recipe.create(
+      title: params[:title],
+      description: params[:description],
+      prep_time: params[:prep_time],
+      rating: params[:rating]
+    )
   redirect to('/#all_recipes')
   end
 
