@@ -43,4 +43,13 @@ class ApplicationController < Sinatra::Base
   get '/import' do
     erb :import
   end
+
+  # Marks recipe as done
+  get '/recipe/:id' do
+    index = params[:id]
+    recipe = Recipe.find_by(id: index)
+    recipe.done = true
+    recipe.save
+    redirect to('/#all_recipes')
+  end
 end
