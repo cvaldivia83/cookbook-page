@@ -21,6 +21,7 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
+  # Creates a new recipe
   post '/recipes' do
     Recipe.create(
       title: params[:title],
@@ -29,6 +30,14 @@ class ApplicationController < Sinatra::Base
       rating: params[:rating]
     )
   redirect to('/#all_recipes')
+  end
+
+  # Deletes the chosen recipe
+  get '/recipes/:id' do
+    index = params[:id]
+    recipe = Recipe.find_by(id: index)
+    recipe.destroy
+    redirect to('/#all_recipes')
   end
 
   get '/import' do
