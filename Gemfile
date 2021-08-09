@@ -10,6 +10,8 @@ gem 'rack'
 gem 'pg'
 gem 'rake'
 gem 'require_all'
+gem 'nokogiri'
+gem 'open-uri'
 
 group :development do
   gem 'sqlite3'

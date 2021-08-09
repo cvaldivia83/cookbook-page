@@ -18,13 +18,23 @@ GEM
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     method_source (1.0.0)
+    mini_portile2 (2.6.1)
     minitest (5.14.4)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    nokogiri (1.12.2)
+      mini_portile2 (~> 2.6.1)
+      racc (~> 1.4)
+    nokogiri (1.12.2-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.12.2-x86_64-linux)
+      racc (~> 1.4)
+    open-uri (0.1.0)
     pg (1.2.3)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    racc (1.5.2)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
@@ -52,6 +62,8 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (= 5.2.3)
+  nokogiri
+  open-uri
   pg
   pry
   rack
