@@ -39,7 +39,3 @@ Thank you for your patience and your time. 🙃
 |'/recipes/:id'| DELETE| deletes recipe
 |'/recipe/:id'| GET | imports recipe
 
-
-
-
-> Written with [StackEdit](https://stackedit.io/).
