@@ -9,7 +9,7 @@ A place to track your favorite recipes and remind you to do some kitchen innovat
 
 ### Deploy
 
-To use Cookbook App, download a zip file from Github ().
+To use Cookbook App, download a zip file from Github (https://github.com/cvaldivia83/cookbook-page).
 
 After unzipping and saving the contents to your desired directory, run `bundle install` in your terminal to install all the gems required for this program.
 
