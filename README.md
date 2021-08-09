@@ -7,6 +7,8 @@
 ### Cookbook
 A place to track your favorite recipes and remind you to do some kitchen innovation, keeping a mindful, healthy diet.
 
+This is a step up from my previous terminal app. If you wish, you can find it in [here](https://github.com/cvaldivia83/Cookbook). 
+
 ### Deploy
 
 To use Cookbook App, download a zip file from Github (https://github.com/cvaldivia83/cookbook-page).
