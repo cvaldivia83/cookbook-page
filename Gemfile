@@ -3,6 +3,7 @@
 source "https://rubygems.org"
 
 ruby '3.1.2'
+
 gem 'sinatra'
 gem 'sinatra-activerecord', '~> 2.0', '>= 2.0.27'
 gem 'activerecord', '~> 7.1.4'
@@ -19,3 +20,4 @@ group :development do
   gem 'sqlite3'
   gem 'pry'
 end
+
