@@ -17,16 +17,13 @@ configure :development do
  end
 
  configure :production do
-  db = URI.parse(ENV['DATABASE_URL'] || 'postgres:///localhost/cookbook_db_rdz2')
+  db_url = ENV['DATABASE_URL']
 
-  ActiveRecord::Base.establish_connection(
-    :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
-    :host     => db.host,
-    :username => db.user,
-    :password => db.password,
-    :database => db.path[1..-1],
-    :encoding => 'utf8'
-  )
+  if db_url 
+    ActiveRecord::Base.establish_connection(db_url)
+  else
+    raise "DATABASE_URL environment variable is not set in production"
+  end
 
   # set :database, { 
   #   adapter: db.scheme == 'postgres' ? 'postgresql' : db.scheme, 
