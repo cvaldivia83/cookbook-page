@@ -6,5 +6,5 @@ development:
 
 production:
   adapter: postgresql
-  database: cookbook
+  database: cookbook_production
   pool: 5
