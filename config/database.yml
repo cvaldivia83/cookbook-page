@@ -1,3 +1,8 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
 development:
   adapter: sqlite3
   database: db/development.sqlite3
@@ -5,6 +10,9 @@ development:
   timeout: 5000
 
 production:
-  adapter: postgresql
-  database: cookbook_production
-  pool: 5
+  <<: *default
+  host: <%= ENV['DATABASE_HOST'] %>
+  database: <%= ENV['DATABASE'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
