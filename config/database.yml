@@ -2,6 +2,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
+  host: 192.168.0.121
+  username: DATABASE_USERNAME
+  password: DATABASE_PASSWORD
 
 development:
   adapter: sqlite3
@@ -10,8 +13,8 @@ development:
   timeout: 5000
 
 production:
-  adapter: postgresql
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   host: <%= ENV['DATABASE_HOST'] %>
   database: <%= ENV['DATABASE'] %>
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  
