@@ -18,7 +18,7 @@ configure :development do
 
  configure :production do
   
-  set :database, { adapter: 'postgres', database: 'cookbook_db_rdz2'}
+  set :database, { adapter: 'postgresql', database: 'cookbook_db_rdz2' }
 
   # set :database, { 
   #   adapter: db.scheme == 'postgres' ? 'postgresql' : db.scheme, 
