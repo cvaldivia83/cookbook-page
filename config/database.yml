@@ -2,9 +2,6 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  host: 192.168.0.121
-  username: DATABASE_USERNAME
-  password: DATABASE_PASSWORD
 
 development:
   adapter: sqlite3
@@ -12,9 +9,14 @@ development:
   pool: 5
   timeout: 5000
 
+
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  host: <%= ENV['DATABASE_HOST'] %>
-  database: <%= ENV['DATABASE'] %>
-  
+  # database: cookbook_db_rdz2
+  # username: cookbook_db_rdz2_user
+  # password: IrPp9YNotqEhCDMNuCxJgEWU6PGG0ulC
+  # host: dpg-csltmfdumphs73as57rg-a
+  # port: 5432
+
+
