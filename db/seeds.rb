@@ -1,3 +1,5 @@
+puts "Started to seed"
+
 Recipe.create!(
   title: "Spiced Mango Lassi",
   description: "Nonfat mango lassi with spices just like in the Indian restaurants. Perfect drink for summer evenings.",
@@ -18,3 +20,5 @@ Recipe.create!(
   prep_time: "7 mins",
   rating: "4.58",
 )
+
+puts "Recipes created!"
