@@ -2,13 +2,12 @@ FROM ruby:3.1.2
 
 WORKDIR /app
 
-COPY Procfile config.ru Gemfile Gemfile.lock ./
+COPY . .
 
-RUN bundle install && \
-    rake db:create && \
-    rake db:migrate && \
+RUN bundle install 
+RUN rake db:migrate && \
     rake db:seed
 
 EXPOSE 9292
 
-CMD ["rackup" "config.ru"]
+CMD ["rackup", "config.ru", "-o", "0.0.0.0"]
